@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.amarpreetsinghprojects.notes.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:id="@+id/addButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFFFF"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        app:layout_constraintHorizontal_weight="3"
+        android:layout_height="wrap_content"
+        android:hint="@string/take_note"
+        android:layout_toStartOf="@id/addButton"
+        android:id="@+id/noteETV"
+        android:layout_alignParentBottom="true"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteTitle"
+        android:hint="@string/addTitle"
+        android:textStyle="bold"
+        android:layout_above="@id/noteETV"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/noteTitle"
+        android:id="@+id/notesRV"
+        android:padding="8dp"/>
+
+
+
+</RelativeLayout>
